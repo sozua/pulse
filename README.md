@@ -1,7 +1,7 @@
 
 # Pulse
 
-![App Screenshot](https://gist.github.com/sozua/de4d7070588771733b416101f798c80f/raw/cee38d5b76898ddfef22ed3f7129b707610f0e63/logo.png)
+![App Screenshot](/assets/logo.png)
 
 Pulse é uma API simples para o gerenciamento de consultas médicas utilizando Django e Django Rest Framework
 
