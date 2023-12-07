@@ -18,6 +18,7 @@ from django.urls import path
 from drf_yasg import openapi
 from drf_yasg.views import get_schema_view
 
+from appointment.views import AppointmentViewSet
 from professional.views import ProfessionalViewset
 
 SchemaView = get_schema_view(
@@ -39,5 +40,14 @@ urlpatterns = [
         'put': 'update',
         'delete': 'destroy',
     }), name='professional'),
+    path('appointments', AppointmentViewSet.as_view({
+        'get': 'list',
+        'post': 'create',
+    }), name='appointments'),
+    path('appointments/<str:pk>', AppointmentViewSet.as_view({
+        'get': 'retrieve',
+        'put': 'update',
+        'delete': 'destroy',
+    }), name='appointment'),
     path('swagger/', SchemaView.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
 ]
