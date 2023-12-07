@@ -45,3 +45,5 @@ Para acessar a documentação do projeto,  utilize a seguinte rota:
 ```http
   GET http://localhost:8000/swagger
 ```
+
+Além disso, você também pode testar a API utilizando o Insomnia importando o arquivo localizado em `/assets/simple_insomnia.json`
