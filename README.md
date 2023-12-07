@@ -23,10 +23,15 @@ source ./.venv/bin/activate
 # Instale as dependencias
 pip install -r requirements.txt
 
-# Inicie o servidor
-python3 manage.py runserver
-# Ou se preferir, rode os testes
+# Crie as migrations
+python3 manage.py makemigrations
+# Execute as migrations
+python3 manage.py migrate --run-syncdb
+
+# Rode os testes
 python3 manage.py test
+# Caso queira, inicie o servidor
+python3 manage.py runserver
 ```
 ## Stack utilizada
 
