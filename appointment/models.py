@@ -6,7 +6,6 @@ from professional.models import Professional
 
 
 class Appointment(models.Model):
-    """ Appointment model """
     id=models.UUIDField(
 		primary_key=True,
 		default=uuid.uuid4,

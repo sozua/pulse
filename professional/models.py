@@ -4,7 +4,6 @@ from django.db import models
 
 
 class Professional(models.Model):
-    """ Health professional model """
     id=models.UUIDField(
 		primary_key=True,
 		default=uuid.uuid4,
@@ -13,7 +12,7 @@ class Professional(models.Model):
     name = models.CharField(max_length=100)
     social_name = models.CharField(max_length=100, blank=True, null=True)
     specialty = models.CharField(max_length=100, blank=True, null=True)
-    registration_number = models.CharField(max_length=20, blank=True, null=True)
+    registration_number = models.CharField(max_length=20, unique=True, blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
